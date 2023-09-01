@@ -27,21 +27,47 @@ public class InsuranceFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroupInsurance = new javax.swing.ButtonGroup();
+        jPanelNorth = new javax.swing.JPanel();
+        jRadioButtonHousing = new javax.swing.JRadioButton();
+        jRadioButtonMedicate = new javax.swing.JRadioButton();
+        jPanelCenter = new javax.swing.JPanel();
+        jPanelHousing = new javax.swing.JPanel();
+        jPanelMedicate = new javax.swing.JPanel();
+        jPanelSouth = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jRadioButtonHousing.setText("Housing");
+        jPanelNorth.add(jRadioButtonHousing);
+
+        jRadioButtonMedicate.setText("Medicate");
+        jRadioButtonMedicate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonMedicateActionPerformed(evt);
+            }
+        });
+        jPanelNorth.add(jRadioButtonMedicate);
+
+        getContentPane().add(jPanelNorth, java.awt.BorderLayout.PAGE_START);
+
+        jPanelCenter.setLayout(new java.awt.CardLayout());
+
+        jPanelHousing.setLayout(new java.awt.CardLayout());
+        jPanelCenter.add(jPanelHousing, "card2");
+
+        jPanelMedicate.setLayout(new java.awt.CardLayout());
+        jPanelCenter.add(jPanelMedicate, "card3");
+
+        getContentPane().add(jPanelCenter, java.awt.BorderLayout.CENTER);
+        getContentPane().add(jPanelSouth, java.awt.BorderLayout.PAGE_END);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jRadioButtonMedicateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMedicateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonMedicateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +105,13 @@ public class InsuranceFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroupInsurance;
+    private javax.swing.JPanel jPanelCenter;
+    private javax.swing.JPanel jPanelHousing;
+    private javax.swing.JPanel jPanelMedicate;
+    private javax.swing.JPanel jPanelNorth;
+    private javax.swing.JPanel jPanelSouth;
+    private javax.swing.JRadioButton jRadioButtonHousing;
+    private javax.swing.JRadioButton jRadioButtonMedicate;
     // End of variables declaration//GEN-END:variables
 }
